@@ -11,7 +11,8 @@ let package = Package(
         .package(url:"https://github.com/tannerdsilva/bedrock.git", .upToNextMinor(from:"0.0.2")),
         .package(url:"https://github.com/hummingbird-project/hummingbird.git", .upToNextMinor(from:"0.16.3")),
         .package(url:"https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from:"1.2.1")),
-        .package(url:"https://github.com/tannerdsilva/QuickLMDB.git", .upToNextMinor(from:"1.4.0"))
+        .package(url:"https://github.com/tannerdsilva/QuickLMDB.git", .upToNextMinor(from:"1.4.0")),
+        .package(url:"https://github.com/apple/swift-crypto.git", .upToNextMinor(from:"2.2.4"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -23,7 +24,8 @@ let package = Package(
             	.product(name:"ArgumentParser", package:"swift-argument-parser"),
             	.product(name:"Hummingbird", package:"hummingbird"),
             	.product(name:"QuickLMDB", package:"QuickLMDB"),
-            	.product(name:"bedrock", package:"bedrock")
+            	.product(name:"bedrock", package:"bedrock"),
+            	.product(name:"Crypto", package:"swift-crypto")
             ]
         ),
         .testTarget(
